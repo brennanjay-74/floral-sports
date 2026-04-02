@@ -1,0 +1,23 @@
+{
+  "name": "Floral Sports",
+  "short_name": "Floral Sports",
+  "description": "Private sports coordination app for the Floral Gang.",
+  "start_url": "/floral-sports/",
+  "scope": "/floral-sports/",
+  "display": "standalone",
+  "background_color": "#0b0f14",
+  "theme_color": "#19ff43",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/floral-sports/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/floral-sports/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
