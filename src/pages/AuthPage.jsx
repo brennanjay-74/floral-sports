@@ -46,36 +46,10 @@ export default function AuthPage() {
         return;
       }
 
-      if (data.user) {
-        const { error: profileError } = await supabase.from('profiles').upsert({
-          id: data.user.id,
-          email: form.email,
-          first_name: form.firstName,
-          last_name: form.lastName,
-          nickname: form.nickname,
-          avatar_icon: form.avatarIcon,
-        });
-
-        if (profileError) {
-          setError(profileError.message);
-          setBusy(false);
-          return;
-        }
-      }
-
-      setMessage('Account created. Check your email if confirmation is enabled, then log in.');
-      setMode('login');
-    } else {
-      const { error: signInError } = await supabase.auth.signInWithPassword({
-        email: form.email,
-        password: form.password,
-      });
-      if (signInError) {
-        setError(signInError.message);
-        setBusy(false);
+        setMessage('Account created. Check your email if confirmation is enabled, then log in.');
+        setMode('login');
+       setBusy(false);
         return;
-      }
-      navigate('/');
     }
 
     setBusy(false);
